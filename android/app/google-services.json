@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "258322407910",
+    "project_id": "scott-c991a",
+    "storage_bucket": "scott-c991a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258322407910:android:941d0d3cf89a735d38f627",
+        "android_client_info": {
+          "package_name": "com.scott.halls.halls"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258322407910-hg0ukt1u9j0i6bgkbn3dnklfh0gj8dfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxoU2ZktzFM9VWhVuLGzWA2YM2SX1AqK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258322407910-hg0ukt1u9j0i6bgkbn3dnklfh0gj8dfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
