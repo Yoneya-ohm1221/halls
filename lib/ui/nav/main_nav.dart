@@ -1,4 +1,5 @@
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:halls/ui/account.dart';
 import 'package:halls/ui/history.dart';
@@ -14,6 +15,7 @@ class MainNav extends StatefulWidget {
 }
 
 class _MainNavState extends State<MainNav> {
+  late FirebaseMessaging messaging;
   int currentIndex=0;
   final screen =[
     const Home(),
@@ -21,9 +23,17 @@ class _MainNavState extends State<MainNav> {
     const NotificationPage(),
     const MyAccount()
   ];
+
   @override
   Widget build(BuildContext context) {
     check();
+    FirebaseMessaging.onMessage.listen((RemoteMessage event) {
+      print("message recieved");
+      print(event.notification!.body);
+    });
+    FirebaseMessaging.onMessageOpenedApp.listen((message) {
+      print('Message clicked!');
+    });
     return Scaffold(
       body: screen[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
