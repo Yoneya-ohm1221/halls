@@ -43,6 +43,10 @@ dependencies:
   cloud_firestore: ^3.4.1
   rounded_loading_button: ^2.0.8
   dropdown_button2: ^1.7.1
+  firebase_messaging: ^12.0.1
+  firebase_database: ^9.1.0
+  flutter_local_notifications: ^9.7.0
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
@@ -57,6 +61,9 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+flutter_icons:
+  image_path: "assets/images/haikyuu.jpeg"
+  android: true
 
 # The following section is specific to Flutter packages.
 flutter:

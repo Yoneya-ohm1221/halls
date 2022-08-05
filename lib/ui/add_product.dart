@@ -81,7 +81,7 @@ class _AddProductState extends State<AddProduct> {
                 //       "image" : "0",
                 //     }).then((value){
                 // });
-                //  FirebaseFirestore.instance.collection("products").doc("RctLPrdnJlfSPvtMDj4v").delete();
+                  //FirebaseFirestore.instance.collection("products").doc("RctLPrdnJlfSPvtMDj4v").delete();
                 Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
