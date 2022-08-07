@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_list.dart';
 import 'package:flutter_signin_button/button_view.dart';
@@ -18,7 +19,6 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Login page"),
-
       ),
       body: Center(
         child: Column(
@@ -28,12 +28,14 @@ class _LoginPageState extends State<LoginPage> {
               Buttons.Google,
               onPressed: () {
                 signInWithGoogle().whenComplete(() {
-                  Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const MainNav(),
-                          maintainState: true),
-                      (Route<dynamic> route) => false);
+                  if (FirebaseAuth.instance.currentUser != null) {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MainNav(),
+                            maintainState: true),
+                        (Route<dynamic> route) => false);
+                  }
                 });
               },
             )

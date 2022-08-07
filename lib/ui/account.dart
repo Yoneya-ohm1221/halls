@@ -16,8 +16,7 @@ class MyAccount extends StatefulWidget {
 class _MyAccountState extends State<MyAccount> {
   final GoogleSignIn googleSignIn = GoogleSignIn();
   String? email = FirebaseAuth.instance.currentUser?.email.toString();
-  String? displayName =
-      FirebaseAuth.instance.currentUser?.displayName.toString();
+  String? displayName = FirebaseAuth.instance.currentUser?.displayName.toString();
 
   @override
   Widget build(BuildContext context) {
